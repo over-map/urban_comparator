@@ -10,14 +10,6 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
-    "stadiamaps-landcover": {
-      "type": "raster",
-      "tiles": [
-        "https://tiles.stadiamaps.com/data/global_landcover_v1/{z}/{x}/{y}.pbf"
-      ],
-      "tileSize": 256,
-      "attribution": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium"
-    },
     "terrain": {
       "type": "raster-dem",
       "tiles": [
@@ -274,18 +266,6 @@
         "hillshade-shadow-color": "#162D39",    
         "hillshade-highlight-color": "#284340", 
         "hillshade-accent-color": "#3A3F2A"   
-      }
-    },
-    {
-      "id": "landcover",
-      "type": "raster",
-      "source": "stadiamaps-landcover",
-      "paint": {
-        "raster-opacity": 0.7,
-        "raster-resampling": "linear"
-      },
-      "layout": {
-        "visibility": "visible"
       }
     },
     {
