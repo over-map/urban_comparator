@@ -25,11 +25,11 @@
     },
     "natural-earth-places": {
       "type": "geojson",
-      "data": "https://over-map.github.io/basemap/public/geojson/ne_50m_populated_places_simple.geojson"
+      "data": "https://over-map.github.io/urban_comparator/public/geojson/ne_50m_populated_places_simple.geojson"
     }
   },
-  "sprite": "https://over-map.github.io/basemap/public/sprites/sprites",
-  "glyphs": "https://over-map.github.io/basemap/public/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://over-map.github.io/urban_comparator/public/sprites/sprites",
+  "glyphs": "https://over-map.github.io/urban_comparator/public/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
