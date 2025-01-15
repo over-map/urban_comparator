@@ -1,2 +1,2 @@
-# urban_comparator
+# Urban Comparator
 Comparative maps of urban expansion
