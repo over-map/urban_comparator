@@ -1,0 +1,1022 @@
+{
+	"fira_sans": {
+		"name": "Fira Sans",
+		"fontFace": {
+			"fira_sans_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"fira_sans_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"fira_sans_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"fira_sans_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"fira_sans_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"fira_sans_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"fira_sans_extra_light": {
+				"name": "Extra Light",
+				"italic": false,
+				"weight": 200
+			},
+			"fira_sans_extra_light_italic": {
+				"name": "Extra Light Italic",
+				"italic": true,
+				"weight": 200
+			},
+			"fira_sans_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"fira_sans_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"fira_sans_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"fira_sans_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"fira_sans_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"fira_sans_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"fira_sans_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"fira_sans_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			},
+			"fira_sans_thin": {
+				"name": "Thin",
+				"italic": false,
+				"weight": 100
+			},
+			"fira_sans_thin_italic": {
+				"name": "Thin Italic",
+				"italic": true,
+				"weight": 100
+			}
+		}
+	},
+	"fira_sans_condensed": {
+		"name": "Fira Sans Condensed",
+		"fontFace": {
+			"fira_sans_condensed_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"fira_sans_condensed_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"fira_sans_condensed_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"fira_sans_condensed_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"fira_sans_condensed_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"fira_sans_condensed_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"fira_sans_condensed_extra_light": {
+				"name": "Extra Light",
+				"italic": false,
+				"weight": 200
+			},
+			"fira_sans_condensed_extra_light_italic": {
+				"name": "Extra Light Italic",
+				"italic": true,
+				"weight": 200
+			},
+			"fira_sans_condensed_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"fira_sans_condensed_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"fira_sans_condensed_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"fira_sans_condensed_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"fira_sans_condensed_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"fira_sans_condensed_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"fira_sans_condensed_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"fira_sans_condensed_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			},
+			"fira_sans_condensed_thin": {
+				"name": "Thin",
+				"italic": false,
+				"weight": 100
+			},
+			"fira_sans_condensed_thin_italic": {
+				"name": "Thin Italic",
+				"italic": true,
+				"weight": 100
+			}
+		}
+	},
+	"fira_sans_extra_condensed": {
+		"name": "Fira Sans Extra Condensed",
+		"fontFace": {
+			"fira_sans_extra_condensed_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"fira_sans_extra_condensed_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"fira_sans_extra_condensed_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"fira_sans_extra_condensed_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"fira_sans_extra_condensed_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"fira_sans_extra_condensed_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"fira_sans_extra_condensed_extra_light": {
+				"name": "Extra Light",
+				"italic": false,
+				"weight": 200
+			},
+			"fira_sans_extra_condensed_extra_light_italic": {
+				"name": "Extra Light Italic",
+				"italic": true,
+				"weight": 200
+			},
+			"fira_sans_extra_condensed_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"fira_sans_extra_condensed_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"fira_sans_extra_condensed_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"fira_sans_extra_condensed_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"fira_sans_extra_condensed_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"fira_sans_extra_condensed_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"fira_sans_extra_condensed_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"fira_sans_extra_condensed_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			},
+			"fira_sans_extra_condensed_thin": {
+				"name": "Thin",
+				"italic": false,
+				"weight": 100
+			},
+			"fira_sans_extra_condensed_thin_italic": {
+				"name": "Thin Italic",
+				"italic": true,
+				"weight": 100
+			}
+		}
+	},
+	"lato": {
+		"name": "Lato",
+		"fontFace": {
+			"lato_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"lato_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"lato_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"lato_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"lato_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"lato_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"lato_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"lato_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"lato_thin": {
+				"name": "Thin",
+				"italic": false,
+				"weight": 100
+			},
+			"lato_thin_italic": {
+				"name": "Thin Italic",
+				"italic": true,
+				"weight": 100
+			}
+		}
+	},
+	"libre_baskerville": {
+		"name": "Libre Baskerville",
+		"fontFace": {
+			"libre_baskerville_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"libre_baskerville_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"libre_baskerville_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			}
+		}
+	},
+	"merriweather_sans": {
+		"name": "Merriweather Sans",
+		"fontFace": {
+			"merriweather_sans_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"merriweather_sans_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"merriweather_sans_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"merriweather_sans_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"merriweather_sans_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"merriweather_sans_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"merriweather_sans_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"merriweather_sans_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"merriweather_sans_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"merriweather_sans_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"merriweather_sans_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"merriweather_sans_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			}
+		}
+	},
+	"noto_sans": {
+		"name": "Noto Sans",
+		"fontFace": {
+			"noto_sans_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"noto_sans_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			}
+		}
+	},
+	"nunito": {
+		"name": "Nunito",
+		"fontFace": {
+			"nunito_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"nunito_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"nunito_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"nunito_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"nunito_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"nunito_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"nunito_extra_light": {
+				"name": "Extra Light",
+				"italic": false,
+				"weight": 200
+			},
+			"nunito_extra_light_italic": {
+				"name": "Extra Light Italic",
+				"italic": true,
+				"weight": 200
+			},
+			"nunito_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"nunito_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"nunito_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"nunito_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"nunito_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"nunito_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"nunito_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"nunito_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			}
+		}
+	},
+	"open_sans": {
+		"name": "Open Sans",
+		"fontFace": {
+			"open_sans_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"open_sans_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"open_sans_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"open_sans_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"open_sans_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"open_sans_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"open_sans_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"open_sans_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"open_sans_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"open_sans_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"open_sans_semibold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"open_sans_semibold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			}
+		}
+	},
+	"open_sans_condensed": {
+		"name": "Open Sans Condensed",
+		"fontFace": {
+			"open_sans_condensed_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"open_sans_condensed_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"open_sans_condensed_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"open_sans_condensed_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"open_sans_condensed_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"open_sans_condensed_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"open_sans_condensed_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"open_sans_condensed_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"open_sans_condensed_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"open_sans_condensed_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"open_sans_condensed_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"open_sans_condensed_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			}
+		}
+	},
+	"open_sans_semi_condensed": {
+		"name": "Open Sans Semi Condensed",
+		"fontFace": {
+			"open_sans_semi_condensed_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"open_sans_semi_condensed_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"open_sans_semi_condensed_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"open_sans_semi_condensed_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"open_sans_semi_condensed_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"open_sans_semi_condensed_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"open_sans_semi_condensed_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"open_sans_semi_condensed_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"open_sans_semi_condensed_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"open_sans_semi_condensed_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"open_sans_semi_condensed_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"open_sans_semi_condensed_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			}
+		}
+	},
+	"pt_sans": {
+		"name": "PT Sans",
+		"fontFace": {
+			"pt_sans_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"pt_sans_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"pt_sans_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"pt_sans_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			}
+		}
+	},
+	"pt_sans_caption": {
+		"name": "PT Sans Caption",
+		"fontFace": {
+			"pt_sans_caption_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"pt_sans_caption_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			}
+		}
+	},
+	"pt_sans_narrow": {
+		"name": "PT Sans Narrow",
+		"fontFace": {
+			"pt_sans_narrow_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"pt_sans_narrow_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			}
+		}
+	},
+	"roboto": {
+		"name": "Roboto",
+		"fontFace": {
+			"roboto_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"roboto_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"roboto_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"roboto_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"roboto_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"roboto_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"roboto_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"roboto_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"roboto_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"roboto_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"roboto_thin": {
+				"name": "Thin",
+				"italic": false,
+				"weight": 100
+			},
+			"roboto_thin_italic": {
+				"name": "Thin Italic",
+				"italic": true,
+				"weight": 100
+			}
+		}
+	},
+	"roboto_condensed": {
+		"name": "Roboto Condensed",
+		"fontFace": {
+			"roboto_condensed_black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"roboto_condensed_black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"roboto_condensed_bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"roboto_condensed_bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"roboto_condensed_extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"roboto_condensed_extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"roboto_condensed_extra_light": {
+				"name": "Extra Light",
+				"italic": false,
+				"weight": 200
+			},
+			"roboto_condensed_extra_light_italic": {
+				"name": "Extra Light Italic",
+				"italic": true,
+				"weight": 200
+			},
+			"roboto_condensed_italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"roboto_condensed_light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"roboto_condensed_light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"roboto_condensed_medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"roboto_condensed_medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"roboto_condensed_regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"roboto_condensed_semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"roboto_condensed_semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			},
+			"roboto_condensed_thin": {
+				"name": "Thin",
+				"italic": false,
+				"weight": 100
+			},
+			"roboto_condensed_thin_italic": {
+				"name": "Thin Italic",
+				"italic": true,
+				"weight": 100
+			}
+		}
+	},
+	"source_sans_3": {
+		"name": "Source Sans 3",
+		"fontFace": {
+			"source_sans_3black": {
+				"name": "Black",
+				"italic": false,
+				"weight": 900
+			},
+			"source_sans_3black_italic": {
+				"name": "Black Italic",
+				"italic": true,
+				"weight": 900
+			},
+			"source_sans_3bold": {
+				"name": "Bold",
+				"italic": false,
+				"weight": 700
+			},
+			"source_sans_3bold_italic": {
+				"name": "Bold Italic",
+				"italic": true,
+				"weight": 700
+			},
+			"source_sans_3extra_bold": {
+				"name": "Extra Bold",
+				"italic": false,
+				"weight": 800
+			},
+			"source_sans_3extra_bold_italic": {
+				"name": "Extra Bold Italic",
+				"italic": true,
+				"weight": 800
+			},
+			"source_sans_3extra_light": {
+				"name": "Extra Light",
+				"italic": false,
+				"weight": 200
+			},
+			"source_sans_3extra_light_italic": {
+				"name": "Extra Light Italic",
+				"italic": true,
+				"weight": 200
+			},
+			"source_sans_3italic": {
+				"name": "Italic",
+				"italic": true,
+				"weight": 400
+			},
+			"source_sans_3light": {
+				"name": "Light",
+				"italic": false,
+				"weight": 300
+			},
+			"source_sans_3light_italic": {
+				"name": "Light Italic",
+				"italic": true,
+				"weight": 300
+			},
+			"source_sans_3medium": {
+				"name": "Medium",
+				"italic": false,
+				"weight": 500
+			},
+			"source_sans_3medium_italic": {
+				"name": "Medium Italic",
+				"italic": true,
+				"weight": 500
+			},
+			"source_sans_3regular": {
+				"name": "Regular",
+				"italic": false,
+				"weight": 400
+			},
+			"source_sans_3semi_bold": {
+				"name": "Semi Bold",
+				"italic": false,
+				"weight": 600
+			},
+			"source_sans_3semi_bold_italic": {
+				"name": "Semi Bold Italic",
+				"italic": true,
+				"weight": 600
+			}
+		}
+	}
+}

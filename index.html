@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basemap</title>
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="icon" href="https://over-map.github.io/basemap/public/favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/pmtiles@2.11.0/dist/index.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 100vh; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+class CustomNavigationControl {
+    onAdd(map) {
+        this._map = map;
+        this._container = document.createElement('div');
+        this._container.className = 'custom-navigation-control maplibregl-ctrl maplibregl-ctrl-group';
+        
+        const zoomInButton = document.createElement('button');
+        zoomInButton.className = 'maplibregl-ctrl-icon maplibregl-ctrl-zoom-in';
+        zoomInButton.type = 'button';
+        zoomInButton.title = 'Zoom In';
+        zoomInButton.innerHTML = '+';
+        zoomInButton.onclick = () => this._map.zoomTo(this._map.getZoom() + 1);
+        this._container.appendChild(zoomInButton);
+        
+        const zoomOutButton = document.createElement('button');
+        zoomOutButton.className = 'maplibregl-ctrl-icon maplibregl-ctrl-zoom-out';
+        zoomOutButton.type = 'button';
+        zoomOutButton.title = 'Zoom Out';
+        zoomOutButton.innerHTML = '−';
+        zoomOutButton.onclick = () => this._map.zoomTo(this._map.getZoom() - 1);
+        this._container.appendChild(zoomOutButton);
+        
+        const compassButton = document.createElement('button');
+        compassButton.className = 'maplibregl-ctrl-icon maplibregl-ctrl-compass';
+        compassButton.type = 'button';
+        compassButton.title = 'Reset Bearing';
+        compassButton.onclick = () => this._map.rotateTo(0);
+        compassButton.innerHTML = '⟲';
+        this._container.appendChild(compassButton);
+        
+        return this._container;
+    }
+    
+    onRemove() {
+        this._container.parentNode.removeChild(this._container);
+        this._map = undefined;
+    }
+}
+
+// Initialize PMTiles protocol
+const protocol = new pmtiles.Protocol();
+
+// Modify the protocol handler
+maplibregl.addProtocol("pmtiles", async (params, callback) => {
+  try {
+    const response = await protocol.tile(params);
+    callback(null, response, null, null);
+  } catch (e) {
+    callback(null, { data: new Uint8Array() });
+  }
+});
+
+// Create the map directly
+const map = new maplibregl.Map({
+    container: 'map',
+    style: 'https://over-map.github.io/basemap/public/styles/style.json',
+    center: [-74.006, 40.7128],
+    zoom: 5,
+    transformRequest: (url, resourceType) => {
+        if (url.includes('protomaps.com')) {
+            // Return empty response instead of null
+            return {
+                url: 'data:,',
+                headers: {},
+                credentials: 'omit'
+            };
+        }
+        
+        if (url.startsWith('pmtiles://')) {
+            return {
+                url: url.replace('pmtiles://', ''),
+                credentials: 'omit'
+            };
+        }
+        return { url };
+    }
+});
+
+// Add custom navigation control
+map.addControl(new CustomNavigationControl(), 'top-left');
+
+// Error handling
+map.on('error', (e) => {
+    // Just log the error without trying to prevent default
+    console.warn("Map error:", e.error);
+});
+
+// Log successful style load
+map.on('style.load', () => {
+    console.log("Style loaded successfully");
+});
+</script>
+</body>
+</html>
