@@ -10,6 +10,14 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
+    "esa-worldcover": {
+      "type": "raster",
+      "tiles": [
+        "https://planetarycomputer.microsoft.com/api/data/v1/item/map/esa-worldcover-v100/{z}/{x}/{y}@1x?collection=esa-worldcover&colormap_name=worldcover"
+      ],
+      "tileSize": 256,
+      "attribution": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium"
+    },
     "terrain": {
       "type": "raster-dem",
       "tiles": [
@@ -266,6 +274,18 @@
         "hillshade-shadow-color": "#162D39",    
         "hillshade-highlight-color": "#284340", 
         "hillshade-accent-color": "#3A3F2A"   
+      }
+    },
+    {
+      "id": "landcover",
+      "type": "raster",
+      "source": "esa-worldcover",
+      "paint": {
+        "raster-opacity": 0.7,
+        "raster-resampling": "linear"
+      },
+      "layout": {
+        "visibility": "visible"
       }
     },
     {
