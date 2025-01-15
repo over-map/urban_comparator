@@ -10,10 +10,10 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
-    "esa-worldcover": {
+    "stadiamaps-landcover": {
       "type": "raster",
       "tiles": [
-        "https://planetarycomputer.microsoft.com/api/data/v1/item/map/esa-worldcover-v100/{z}/{x}/{y}@1x?collection=esa-worldcover&colormap_name=worldcover"
+        "https://tiles.stadiamaps.com/data/global_landcover_v1/{z}/{x}/{y}.pbf"
       ],
       "tileSize": 256,
       "attribution": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium"
@@ -279,7 +279,7 @@
     {
       "id": "landcover",
       "type": "raster",
-      "source": "esa-worldcover",
+      "source": "stadiamaps-landcover",
       "paint": {
         "raster-opacity": 0.7,
         "raster-resampling": "linear"
