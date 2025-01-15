@@ -10,10 +10,6 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
-    "overture-buildings": {
-      "type": "vector",
-      "url": "pmtiles://https://overturemaps-tiles-us-west-2-beta.s3.amazonaws.com/2024-12-18/buildings.pmtiles"
-    },
     "terrain": {
       "type": "raster-dem",
       "tiles": [
@@ -22,10 +18,6 @@
       "tileSize": 256,
       "maxzoom": 14,
       "encoding": "terrarium"
-    },
-    "natural-earth-places": {
-      "type": "geojson",
-      "data": "https://over-map.github.io/urban_comparator/public/geojson/ne_50m_populated_places_simple.geojson"
     }
   },
   "sprite": "https://over-map.github.io/urban_comparator/public/sprites/sprites",
@@ -634,42 +626,6 @@
         "fill-color": "#B2D052",
         "fill-opacity": {"stops": [[14, 0], [15, 0.5]]},
         "fill-translate": [-2, -2]
-      }
-    },
-    {
-      "id": "building-overture",
-      "type": "fill-extrusion",
-      "source": "overture-buildings",
-      "source-layer": "building",
-      "minzoom": 14.5,
-      "paint": {
-          "fill-extrusion-color": "#B2D052",
-          "fill-extrusion-height": [
-              "case",
-              ["==", ["get", "is_underground"], true], 0,
-              ["==", ["coalesce", ["get", "height"], ["get", "num_floors"]], null], 3,
-              ["coalesce", ["get", "height"], ["*", ["get", "num_floors"], 3], 3]
-          ],
-          "fill-extrusion-base": ["get", "min_height"],
-          "fill-extrusion-opacity": {"stops": [[14, 0], [15, 0.9]]}
-      }
-    },
-    {
-      "id": "building-part-overture",
-      "type": "fill-extrusion",
-      "source": "overture-buildings",
-      "source-layer": "building_part",
-      "minzoom": 14.5,
-      "paint": {
-          "fill-extrusion-color": "#B2D052",
-          "fill-extrusion-height": [
-              "case",
-              ["==", ["get", "is_underground"], true], 0,
-              ["==", ["coalesce", ["get", "height"], ["get", "num_floors"]], null], 3,
-              ["coalesce", ["get", "height"], ["*", ["get", "num_floors"], 3], 3]
-          ],
-          "fill-extrusion-base": ["get", "min_height"],
-          "fill-extrusion-opacity": {"stops": [[14, 0], [15, 0.9]]}
       }
     },
     {
@@ -6597,58 +6553,6 @@
         "text-halo-width": 2,
         "text-halo-blur": 1,
         "icon-halo-color": "#042940"
-      }
-    },
-    {
-      "id": "populated-places-circles",
-      "type": "circle",
-      "source": "natural-earth-places",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "circle-radius": [
-          "interpolate",
-          ["linear"],
-          ["get", "pop_max"],
-          0, 0.5,
-          10000, 1,
-          100000, 2,
-          500000, 3,
-          1000000, 4,
-          5000000, 6,
-          15000000, 12
-        ],
-        "circle-color": [
-          "interpolate",
-          ["linear"],
-          ["get", "pop_max"],
-          0, "#9FC131",
-          1000000, "#9FC131",
-          5000000, "#9FC131",
-          10000000, "#9FC131"
-        ],
-        "circle-stroke-color": "#005C53",
-        "circle-stroke-width": 0.1,
-        "circle-opacity": 0.8
-      }
-    },
-    {
-      "id": "populated-places-labels",
-      "type": "symbol",
-      "source": "natural-earth-places",
-      "layout": {
-        "visibility": "none",
-        "text-field": ["get", "name"],
-        "text-font": ["noto_sans_regular"],
-        "text-size": 12,
-        "text-offset": [0, 1.5],
-        "text-anchor": "top"
-      },
-      "paint": {
-        "text-color": "#000000",
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
       }
     },
     {
