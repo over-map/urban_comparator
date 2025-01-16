@@ -10,10 +10,10 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
-    "urban-areas": {
+    "natural-earth-urban-areas": {
       "type": "geojson",
-      "data": "https://services6.arcgis.com/7JuctInsSWolBI3q/arcgis/rest/services/World_Urban_Extents_2015/FeatureServer/0/query?where=1=1&outFields=*&f=geojson",
-      "attribution": "UN Open GIS Urban Extents 2015"
+      "data": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_urban_areas.geojson",
+      "attribution": "Made with Natural Earth"
     },
     "terrain": {
       "type": "raster-dem",
@@ -276,7 +276,7 @@
     {
       "id": "urban-areas-fill",
       "type": "fill",
-      "source": "urban-areas",
+      "source": "natural-earth-urban-areas",
       "paint": {
         "fill-color": "#ff4d4d",
         "fill-opacity": 0.5
@@ -285,7 +285,7 @@
     {
       "id": "urban-areas-outline",
       "type": "line",
-      "source": "urban-areas",
+      "source": "natural-earth-urban-areas",
       "paint": {
         "line-color": "#ff0000",
         "line-width": 1
