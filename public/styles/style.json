@@ -10,10 +10,9 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
-    "natural-earth-urban-areas": {
+    "urban-areas": {
       "type": "geojson",
-      "data": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_urban_areas.geojson",
-      "attribution": "Made with Natural Earth"
+      "url": "https://over-map.github.io/urban_comparator/public/geojson/cities.geojson"
     },
     "terrain": {
       "type": "raster-dem",
@@ -276,18 +275,18 @@
     {
       "id": "urban-areas-fill",
       "type": "fill",
-      "source": "natural-earth-urban-areas",
+      "source": "urban-areas",
       "paint": {
-        "fill-color": "#ff4d4d",
+        "fill-color": "#324F60",
         "fill-opacity": 0.5
       }
     },
     {
       "id": "urban-areas-outline",
       "type": "line",
-      "source": "natural-earth-urban-areas",
+      "source": "urban-areas",
       "paint": {
-        "line-color": "#ff0000",
+        "line-color": "#324F60",
         "line-width": 1
       }
     },
