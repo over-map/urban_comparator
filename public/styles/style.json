@@ -10,6 +10,14 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
+    "ghsl_urban": {
+      "type": "raster",
+      "tiles": [
+        "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_GLOBE_R2023A_EPSG3857_30_V1_0/WMTS/built_s/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "attribution": "© European Union, 1995-2024"
+    },
     "terrain": {
       "type": "raster-dem",
       "tiles": [
@@ -266,6 +274,14 @@
         "hillshade-shadow-color": "#162D39",    
         "hillshade-highlight-color": "#284340", 
         "hillshade-accent-color": "#3A3F2A"   
+      }
+    },
+    {
+      "id": "urban-areas",
+      "type": "raster",
+      "source": "ghsl_urban",
+      "paint": {
+        "raster-opacity": 0.7
       }
     },
     {
