@@ -3,41 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basemap</title>
+    <title>Urban Comparator</title>
     <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
     <link rel="icon" href="https://over-map.github.io/basemap/public/favicon.ico" type="image/x-icon">
     <script src="https://unpkg.com/pmtiles@2.11.0/dist/index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; height: 100vh; }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+        .map-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            gap: 4px;
+        }
+        .map {
+            flex: 1;
+            height: 100%;
+            position: relative;
+            background-color: white;
+        }
+        #map1, #map2, #map3 {
+            width: 100%;
+            height: 100%;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 300px;
+        }
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Fira Sans', sans-serif;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #4A90E2;
+        }
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .search-result-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Fira Sans', sans-serif;
+        }
+        .search-result-item:hover {
+            background-color: #f5f5f5;
+        }
     </style>
 </head>
 <body>
-<div id="map"></div>
+<div class="map-container">
+    <div class="map">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for a city..." data-map-id="map1">
+            <div class="search-results"></div>
+        </div>
+        <div id="map1"></div>
+    </div>
+    <div class="map">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for a city..." data-map-id="map2">
+            <div class="search-results"></div>
+        </div>
+        <div id="map2"></div>
+    </div>
+    <div class="map">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for a city..." data-map-id="map3">
+            <div class="search-results"></div>
+        </div>
+        <div id="map3"></div>
+    </div>
+</div>
 <script>
 class CustomNavigationControl {
     onAdd(map) {
         this._map = map;
         this._container = document.createElement('div');
         this._container.className = 'custom-navigation-control maplibregl-ctrl maplibregl-ctrl-group';
-        
+
         const zoomInButton = document.createElement('button');
         zoomInButton.className = 'maplibregl-ctrl-icon maplibregl-ctrl-zoom-in';
         zoomInButton.type = 'button';
         zoomInButton.title = 'Zoom In';
         zoomInButton.innerHTML = '+';
-        zoomInButton.onclick = () => this._map.zoomTo(this._map.getZoom() + 1);
+        zoomInButton.onclick = () => this._map.zoomTo(Math.min(this._map.getZoom() + 1, 12));
         this._container.appendChild(zoomInButton);
-        
+
         const zoomOutButton = document.createElement('button');
         zoomOutButton.className = 'maplibregl-ctrl-icon maplibregl-ctrl-zoom-out';
         zoomOutButton.type = 'button';
         zoomOutButton.title = 'Zoom Out';
         zoomOutButton.innerHTML = '−';
-        zoomOutButton.onclick = () => this._map.zoomTo(this._map.getZoom() - 1);
+        zoomOutButton.onclick = () => this._map.zoomTo(Math.max(this._map.getZoom() - 1, 8));
         this._container.appendChild(zoomOutButton);
-        
+
         const compassButton = document.createElement('button');
         compassButton.className = 'maplibregl-ctrl-icon maplibregl-ctrl-compass';
         compassButton.type = 'button';
@@ -45,67 +136,193 @@ class CustomNavigationControl {
         compassButton.onclick = () => this._map.rotateTo(0);
         compassButton.innerHTML = '⟲';
         this._container.appendChild(compassButton);
-        
+
         return this._container;
     }
-    
+
     onRemove() {
         this._container.parentNode.removeChild(this._container);
         this._map = undefined;
     }
 }
 
-// Initialize PMTiles protocol
 const protocol = new pmtiles.Protocol();
 
-// Modify the protocol handler
 maplibregl.addProtocol("pmtiles", async (params, callback) => {
-  try {
-    const response = await protocol.tile(params);
-    callback(null, response, null, null);
-  } catch (e) {
-    callback(null, { data: new Uint8Array() });
-  }
-});
-
-// Create the map directly
-const map = new maplibregl.Map({
-    container: 'map',
-    style: 'https://over-map.github.io/urban_comparator/public/styles/style.json',
-    center: [-74.006, 40.7128],
-    zoom: 5,
-    transformRequest: (url, resourceType) => {
-        if (url.includes('protomaps.com')) {
-            // Return empty response instead of null
-            return {
-                url: 'data:,',
-                headers: {},
-                credentials: 'omit'
-            };
-        }
-        
-        if (url.startsWith('pmtiles://')) {
-            return {
-                url: url.replace('pmtiles://', ''),
-                credentials: 'omit'
-            };
-        }
-        return { url };
+    try {
+        const response = await protocol.tile(params);
+        callback(null, response, null, null);
+    } catch (e) {
+        callback(null, { data: new Uint8Array() });
     }
 });
 
-// Add custom navigation control
-map.addControl(new CustomNavigationControl(), 'top-left');
+async function searchLocation(query) {
+    const endpoint = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+    try {
+        const response = await fetch(endpoint, {
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'MapViewer/1.0'
+            }
+        });
+        return await response.json();
+    } catch (error) {
+        console.error('Search error:', error);
+        return [];
+    }
+}
 
-// Error handling
-map.on('error', (e) => {
-    // Just log the error without trying to prevent default
-    console.warn("Map error:", e.error);
-});
+function setupSearch(input, resultsContainer, map) {
+    let timeout;
 
-// Log successful style load
-map.on('style.load', () => {
-    console.log("Style loaded successfully");
+    input.addEventListener('input', () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(async () => {
+            const query = input.value.trim();
+            if (query.length < 3) {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+
+            const results = await searchLocation(query);
+            resultsContainer.innerHTML = '';
+
+            results.forEach(result => {
+                const div = document.createElement('div');
+                div.className = 'search-result-item';
+                div.textContent = result.display_name;
+                div.addEventListener('click', () => {
+                    const coords = [parseFloat(result.lon), parseFloat(result.lat)];
+                    map.initialCenter = coords;
+                    map.setCenter(coords);
+                    resultsContainer.style.display = 'none';
+                    input.value = result.display_name;
+                });
+                resultsContainer.appendChild(div);
+            });
+
+            resultsContainer.style.display = results.length ? 'block' : 'none';
+        }, 300);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+            resultsContainer.style.display = 'none';
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cities = [
+        { name: 'milan', coords: [9.1900, 45.4642] },
+        { name: 'berlin', coords: [13.4050, 52.5200] },
+        { name: 'paris', coords: [2.3522, 48.8566] }
+    ];
+
+    const maps = [];
+    const mapIds = ['map1', 'map2', 'map3'];
+    let loadedMaps = 0;
+    let syncInProgress = false;
+
+    cities.forEach((city, index) => {
+        const map = new maplibregl.Map({
+            container: mapIds[index],
+            style: 'https://over-map.github.io/urban_comparator/public/styles/style.json',
+            center: city.coords,
+            zoom: 8,
+            minZoom: 8,
+            maxZoom: 12,
+            interactive: true,
+            attributionControl: index === 2
+        });
+
+        maps.push(map);
+        map.initialCenter = city.coords;
+
+        const searchInput = document.querySelector(`input[data-map-id="${mapIds[index]}"]`);
+        const searchResults = searchInput.nextElementSibling;
+        setupSearch(searchInput, searchResults, map);
+
+        map.on('style.load', () => {
+            if (index === 0) {
+                map.addControl(new CustomNavigationControl(), 'top-left');
+            }
+
+            // Wait for the land-residential layer to be loaded
+            if (map.getLayer('land-residential')) {
+                // Add landcover source
+                map.addSource('landcover', {
+                    type: 'raster',
+                    tiles: [
+                        `https://ic.imagery1.arcgis.com/arcgis/rest/services/Sentinel2_10m_LandCover/ImageServer/exportImage?bbox={bbox-epsg-3857}&bboxSR=3857&size=256%2C256&imageSR=3857&format=png&pixelType=U8&renderingRule=%7B%22rasterFunction%22%3A%22Colormap%22%2C%22rasterFunctionArguments%22%3A%7B%22Colormap%22%3A%5B%5B7%2C0%2C0%2C0%5D%5D%2C%22Raster%22%3A%22%24%24%22%7D%2C%22outputPixelType%22%3A%22U8%22%7D&f=image`
+                    ],
+                    tileSize: 256
+                });
+
+                // Add landcover layer after land-residential with minzoom
+                map.addLayer({
+                    id: `landcover-${index}`,
+                    type: 'raster',
+                    source: 'landcover',
+                    maxzoom: 11,
+                    paint: {
+                        'raster-opacity': [
+                            'interpolate',
+                            ['linear'],
+                            ['zoom'],
+                            10.5, 1,
+                            11, 0
+                        ]
+                    }
+                }, 'land-residential');
+            }
+
+            loadedMaps++;
+            if (loadedMaps === 3) {
+                enableSync();
+            }
+        });
+    });
+
+    function enableSync() {
+        maps.forEach((map, i) => {
+            map.on('move', () => {
+                if (syncInProgress) return;
+                
+                syncInProgress = true;
+                const center = map.getCenter();
+                const zoom = map.getZoom();
+                const bearing = map.getBearing();
+                const pitch = map.getPitch();
+
+                const dx = center.lng - map.initialCenter[0];
+                const dy = center.lat - map.initialCenter[1];
+
+                maps.forEach((otherMap, j) => {
+                    if (i !== j) {
+                        const newLng = otherMap.initialCenter[0] + dx;
+                        const newLat = otherMap.initialCenter[1] + dy;
+                        
+                        otherMap.setCenter([newLng, newLat]);
+                        otherMap.setZoom(zoom);
+                        otherMap.setBearing(bearing);
+                        otherMap.setPitch(pitch);
+                    }
+                });
+                
+                setTimeout(() => {
+                    syncInProgress = false;
+                }, 0);
+            });
+        });
+    }
+
+    maps.forEach((map, i) => {
+        map.on('error', (e) => {
+            console.warn(`Map ${i + 1} error:`, e.error);
+        });
+    });
 });
 </script>
 </body>
