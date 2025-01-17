@@ -400,7 +400,7 @@
       "source-layer": "dam_polygons",
       "filter": ["==", "kind", "dam"],
       "paint": {
-        "fill-color": "#032537",
+        "fill-color": "#042940",
         "fill-opacity": {"stops": [[12, 0], [13, 1]]}
       }
     },
@@ -411,7 +411,7 @@
       "source-layer": "dam_lines",
       "filter": ["==", "kind", "dam"],
       "layout": {"line-cap": "round", "line-join": "round"},
-      "paint": {"line-color": "#032537"}
+      "paint": {"line-color": "#042940"}
     },
     {
       "id": "water-pier-area",
@@ -420,7 +420,7 @@
       "source-layer": "pier_polygons",
       "filter": ["in", "kind", "pier", "breakwater", "groyne"],
       "paint": {
-        "fill-color": "#032537",
+        "fill-color": "#042940",
         "fill-opacity": {"stops": [[12, 0], [13, 1]]}
       }
     },
@@ -431,7 +431,7 @@
       "source-layer": "pier_lines",
       "filter": ["in", "kind", "pier", "breakwater", "groyne"],
       "layout": {"line-cap": "round", "line-join": "round"},
-      "paint": {"line-color": "#032537"}
+      "paint": {"line-color": "#042940"}
     },
     {
       "id": "site-dangerarea",
@@ -548,7 +548,7 @@
       "filter": ["==", "kind", "runway"],
       "layout": {"line-join": "round"},
       "paint": {
-        "line-color": "#052B3D",
+        "line-color": "#042940",
         "line-width": {
           "stops": [
             [11, 0],
@@ -610,7 +610,7 @@
       "type": "fill",
       "source": "versatiles-shortbread",
       "source-layer": "buildings",
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "#005C53",
         "fill-opacity": {"stops": [[14, 0], [15, 1]]}
@@ -621,7 +621,7 @@
       "type": "fill",
       "source": "versatiles-shortbread",
       "source-layer": "buildings",
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "#B2D052",
         "fill-opacity": {"stops": [[14, 0], [15, 0.5]]},
@@ -2272,7 +2272,7 @@
           24, 
           3
         ],
-        "line-color": "#06405C",
+        "line-color": "#D6D58E",
         "line-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.5, 1]
       }
     },
@@ -2756,7 +2756,7 @@
           24, 
           2
         ],
-        "line-color": "#06405C",
+        "line-color": "#D6D58E",
         "line-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.5, 1]
       }
     },
