@@ -10,10 +10,6 @@
       "type": "vector",
       "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
     },
-    "urban-areas": {
-      "type": "geojson",
-      "url": "https://over-map.github.io/urban_comparator/public/geojson/cities.geojson"
-    },
     "terrain": {
       "type": "raster-dem",
       "tiles": [
@@ -270,24 +266,6 @@
         "hillshade-shadow-color": "#162D39",    
         "hillshade-highlight-color": "#284340", 
         "hillshade-accent-color": "#3A3F2A"   
-      }
-    },
-    {
-      "id": "urban-areas-fill",
-      "type": "fill",
-      "source": "urban-areas",
-      "paint": {
-        "fill-color": "#324F60",
-        "fill-opacity": 0.5
-      }
-    },
-    {
-      "id": "urban-areas-outline",
-      "type": "line",
-      "source": "urban-areas",
-      "paint": {
-        "line-color": "#324F60",
-        "line-width": 1
       }
     },
     {
