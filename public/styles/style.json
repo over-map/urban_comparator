@@ -148,7 +148,7 @@
         ["in", "kind", "park", "village_green", "recreation_ground"]
       ],
       "paint": {
-        "fill-color": "#9FC131",
+        "fill-color": "#99B92E",
         "fill-opacity": {"stops": [[11, 0], [12, 1]]}
       }
     },
@@ -200,7 +200,7 @@
       "source-layer": "land",
       "filter": ["all", ["in", "kind", "forest"]],
       "paint": {
-        "fill-color": "#9FC131",
+        "fill-color": "#99B92E",
         "fill-opacity": {"stops": [[7, 0], [8, 0.1]]}
       }
     },
@@ -2307,7 +2307,7 @@
           24, 
           3
         ],
-        "line-color": "#005C53",
+        "line-color": "#D6D58E",
         "line-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.5, 1]
       }
     },
@@ -2342,7 +2342,7 @@
           24, 
           3
         ],
-        "line-color": "#9FC131",
+        "line-color": "#D6D58E",
         "line-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.5, 1]
       }
     },
@@ -2791,7 +2791,7 @@
           24, 
           2
         ],
-        "line-color": "#005C53",
+        "line-color": "#D6D58E",
         "line-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.5, 1]
       }
     },
