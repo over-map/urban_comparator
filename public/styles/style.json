@@ -43,7 +43,7 @@
           9.5,
           0.4,
           10,
-          0
+          0.4
         ],
         "hillshade-shadow-color": "#1A3241",
         "hillshade-highlight-color": "#2C4946",
@@ -261,10 +261,24 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#005C53",
-        "line-width": {
-          "stops": [[9, 0], [10, 3], [15, 5], [17, 9], [18, 20], [20, 60]]
-        }
+        "line-color": "#859662",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9,
+          0,
+          10,
+          0.5,
+          15,
+          5,
+          17,
+          9,
+          18,
+          20,
+          20,
+          60
+        ]
       }
     },
     {
@@ -284,10 +298,26 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#005C53",
-        "line-width": {
-          "stops": [[9, 0], [10, 0.2], [15, 0.5], [17, 8], [18, 17], [20, 50]]
-        }
+        "line-color": "#859662",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9,
+          0,
+          10.2,
+          0,
+          12,
+          0.25,
+          15,
+          0.5,
+          17,
+          8,
+          18,
+          17,
+          20,
+          50
+        ]
       }
     },
     {
@@ -307,10 +337,24 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#005C53",
-        "line-width": {
-          "stops": [[13, 0], [14, 1], [15, 2], [17, 6], [18, 12], [20, 30]]
-        }
+        "line-color": "#859662",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          13,
+          0,
+          14,
+          0.25,
+          15,
+          2,
+          17,
+          6,
+          18,
+          12,
+          20,
+          30
+        ]
       }
     },
     {
@@ -330,7 +374,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#005C53",
+        "line-color": "#859662",
         "line-width": {"stops": [[14, 0], [15, 1], [17, 4], [18, 8], [20, 20]]}
       }
     },
@@ -342,8 +386,8 @@
       "filter": ["==", "kind", "water"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#005C53",
-        "fill-opacity": {"stops": [[7, 0], [8, 1]]}
+        "fill-color": "#859662",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
       }
     },
     {
@@ -354,8 +398,8 @@
       "filter": ["==", "kind", "river"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#005C53",
-        "fill-opacity": {"stops": [[7, 0], [8, 1]]}
+        "fill-color": "#859662",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
       }
     },
     {
@@ -364,9 +408,10 @@
       "source": "versatiles-shortbread",
       "source-layer": "water_polygons",
       "filter": ["in", "kind", "reservoir", "basin", "dock"],
+      "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#005C53",
-        "fill-opacity": {"stops": [[7, 0], [8, 1]]}
+        "fill-color": "#859662",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
       }
     },
     {
