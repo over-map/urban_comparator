@@ -45,8 +45,8 @@
           10,
           0
         ],
-        "hillshade-shadow-color": "#162D39",
-        "hillshade-highlight-color": "#284340",
+        "hillshade-shadow-color": "#1A3241",
+        "hillshade-highlight-color": "#2C4946",
         "hillshade-accent-color": "#3A3F2A"
       }
     },
@@ -243,28 +243,6 @@
       "source-layer": "land",
       "filter": ["all", ["in", "kind", "bog", "marsh", "string_bog", "swamp"]],
       "paint": {"fill-color": "#1F3B33"}
-    },
-    {
-      "id": "terrain-mask",
-      "type": "hillshade",
-      "source": "terrain",
-      "paint": {
-        "hillshade-illumination-direction": 135,
-        "hillshade-exaggeration": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          1,
-          0,
-          9.5,
-          0,
-          10,
-          0.4
-        ],
-        "hillshade-shadow-color": "#162D39",
-        "hillshade-highlight-color": "#284340",
-        "hillshade-accent-color": "#3A3F2A"
-      }
     },
     {
       "id": "water-river",
@@ -5946,7 +5924,23 @@
       },
       "paint": {
         "line-color": "#DBF227",
-        "line-width": {"stops": [[1, 0], [2, 0.5], [5, 0.5], [10, 4]]},
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1,
+          0,
+          2,
+          0.25,
+          3,
+          0.5,
+          4,
+          1,
+          5,
+          2,
+          10,
+          4
+        ],
         "line-opacity": 1
       }
     },
@@ -5964,8 +5958,24 @@
       ],
       "layout": {"line-cap": "square", "visibility": "visible"},
       "paint": {
-        "line-width": {"stops": [[2, 0], [3, 1], [10, 4]]},
         "line-color": "#DBF227",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          1,
+          0,
+          2,
+          0.25,
+          3,
+          0.5,
+          4,
+          1,
+          5,
+          2,
+          10,
+          4
+        ],
         "line-dasharray": [2, 1]
       }
     },
@@ -5987,23 +5997,24 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#6C7F20",
+        "line-color": "#DBF227",
         "line-width": {"stops": [[3, 0.1], [5, 0.2], [6, 0.3]]},
         "line-opacity": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          2.5,
+          4,
           0,
-          3,
+          5,
           1,
           6,
           1,
           8,
           2,
-          8.5,
+          8.1,
           0
-        ]
+        ],
+        "line-dasharray": [10, 10]
       }
     },
     {
