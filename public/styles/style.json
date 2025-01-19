@@ -301,7 +301,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#859662",
+        "line-color": "#005C53",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -338,7 +338,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#859662",
+        "line-color": "#005C53",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -377,7 +377,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#859662",
+        "line-color": "#005C53",
         "line-width": [
           "interpolate",
           ["linear"],
@@ -414,7 +414,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#859662",
+        "line-color": "#005C53",
         "line-width": {"stops": [[14, 0], [15, 1], [17, 4], [18, 8], [20, 20]]}
       }
     },
@@ -426,7 +426,7 @@
       "filter": ["==", "kind", "water"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#859662",
+        "fill-color": "#005C53",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
       }
     },
@@ -438,7 +438,7 @@
       "filter": ["==", "kind", "river"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#859662",
+        "fill-color": "#005C53",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
       }
     },
@@ -450,7 +450,7 @@
       "filter": ["in", "kind", "reservoir", "basin", "dock"],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#859662",
+        "fill-color": "#005C53",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 8.5, 1]
       }
     },
