@@ -606,26 +606,63 @@
       }
     },
     {
-      "id": "building:outline",
+      "id": "building-shadow",
       "type": "fill",
       "source": "versatiles-shortbread",
       "source-layer": "buildings",
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "#005C53",
-        "fill-opacity": {"stops": [[14, 0], [15, 1]]}
+        "fill-color": "#000000",
+        "fill-opacity": {"stops": [[14, 0], [15, 0.5]]},
+        "fill-translate": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          14,
+          ["literal", [0, 0]],
+          15,
+          ["literal", [1, -1]],
+          16,
+          ["literal", [2, -2]],
+          17,
+          ["literal", [3, -3]],
+          18,
+          ["literal", [5, -5]],
+          19,
+          ["literal", [10, -10]],
+          20,
+          ["literal", [20, -20]],
+          21,
+          ["literal", [40, -40]],
+          22,
+          ["literal", [80, -80]],
+          23,
+          ["literal", [160, -160]],
+          24,
+          ["literal", [320, -320]]
+        ]
       }
     },
     {
-      "id": "building",
+      "id": "building-fill",
       "type": "fill",
       "source": "versatiles-shortbread",
       "source-layer": "buildings",
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "#B2D052",
-        "fill-opacity": {"stops": [[14, 0], [15, 0.5]]},
-        "fill-translate": [-2, -2]
+        "fill-opacity": {"stops": [[14, 0], [15, 1]]}
+      }
+    },
+    {
+      "id": "building-line",
+      "type": "line",
+      "source": "versatiles-shortbread",
+      "source-layer": "buildings",
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "#042940",
+        "line-opacity": {"stops": [[14, 0], [15, 0.5]]}
       }
     },
     {
@@ -635,7 +672,7 @@
       "source-layer": "street_polygons",
       "filter": ["all", ["==", "tunnel", true], ["==", "kind", "pedestrian"]],
       "paint": {
-        "fill-color": "#D6D58E",
+        "fill-color": "#415C70",
         "fill-opacity": {"stops": [[12, 0], [13, 1]]}
       }
     },
@@ -3901,7 +3938,7 @@
       "source": "versatiles-shortbread",
       "source-layer": "bridges",
       "paint": {
-        "fill-color": "#D6D58E",
+        "fill-color": "#415C70",
         "fill-antialias": true,
         "fill-opacity": 0.8
       }
@@ -3913,7 +3950,7 @@
       "source-layer": "street_polygons",
       "filter": ["all", ["==", "bridge", true], ["==", "kind", "pedestrian"]],
       "paint": {
-        "fill-color": "#D6D58E",
+        "fill-color": "#415C70",
         "fill-opacity": {"stops": [[12, 0], [13, 1]]}
       }
     },
