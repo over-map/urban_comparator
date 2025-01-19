@@ -76,7 +76,15 @@
       "filter": ["all", ["in", "kind", "commercial", "retail"]],
       "paint": {
         "fill-color": "#41566B",
-        "fill-opacity": {"stops": [[10, 0], [11, 1]]}
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          0,
+          11,
+          0.4
+        ]
       }
     },
     {
@@ -87,7 +95,15 @@
       "filter": ["all", ["in", "kind", "industrial", "quarry", "railway"]],
       "paint": {
         "fill-color": "#586D6B",
-        "fill-opacity": {"stops": [[10, 0], [11, 1]]}
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          0,
+          11,
+          0.4
+        ]
       }
     },
     {
@@ -98,7 +114,15 @@
       "filter": ["all", ["in", "kind", "garages", "residential"]],
       "paint": {
         "fill-color": "#324F60",
-        "fill-opacity": {"stops": [[10, 0], [11, 1]]}
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          0,
+          11,
+          0.4
+        ]
       }
     },
     {
@@ -123,7 +147,15 @@
       ],
       "paint": {
         "fill-color": "#162D39",
-        "fill-opacity": {"stops": [[10, 0], [11, 1]]}
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          0,
+          11,
+          0.4
+        ]
       }
     },
     {
@@ -134,7 +166,15 @@
       "filter": ["all", ["in", "kind", "landfill"]],
       "paint": {
         "fill-color": "#122831",
-        "fill-opacity": {"stops": [[10, 0], [11, 1]]}
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          0,
+          11,
+          0.4
+        ]
       }
     },
     {
@@ -225,7 +265,7 @@
       "filter": ["all", ["in", "kind", "heath", "scrub"]],
       "paint": {
         "fill-color": "#284340",
-        "fill-opacity": {"stops": [[11, 0], [12, 1]]}
+        "fill-opacity": {"stops": [[11, 0], [12, 0.4]]}
       }
     },
     {
