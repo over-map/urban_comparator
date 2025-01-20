@@ -6555,7 +6555,7 @@
         "text-halo-width": 2,
         "text-halo-blur": 1,
         "icon-halo-color": "#021624",
-        "text-opacity": {"stops": [[8, 0], [8.5, 1], [12.5, 1], [13, 0]]}
+        "text-opacity": {"stops": [[8, 0], [8.1, 1], [12.5, 1], [13, 0]]}
       }
     },
     {
@@ -6588,7 +6588,7 @@
         "text-halo-width": 2,
         "text-halo-blur": 1,
         "icon-halo-color": "#021624",
-        "text-opacity": {"stops": [[8, 0], [8.5, 1]]}
+        "text-opacity": {"stops": [[8, 0], [8.1, 1]]}
       }
     },
     {
