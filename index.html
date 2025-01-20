@@ -134,7 +134,7 @@ class CustomNavigationControl {
         compassButton.type = 'button';
         compassButton.title = 'Reset Bearing';
         compassButton.onclick = () => this._map.rotateTo(0);
-        compassButton.innerHTML = '⟲';
+        compassButton.innerHTML = '↑';
         this._container.appendChild(compassButton);
 
         return this._container;
@@ -215,9 +215,9 @@ function setupSearch(input, resultsContainer, map) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const cities = [
-        { name: 'milan', coords: [9.1900, 45.4642] },
-        { name: 'berlin', coords: [13.4050, 52.5200] },
-        { name: 'paris', coords: [2.3522, 48.8566] }
+        { name: 'tokyo', coords: [139.6917, 35.6895] },
+        { name: 'paris', coords: [2.3522, 48.8566] },
+        { name: 'moscow', coords: [37.6173, 55.7558] }
     ];
 
     const maps = [];
