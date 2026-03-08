@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/urban_comparator/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/urban_comparator/assets/index-6iuNDXf8.js"></script>
+  <link rel="stylesheet" crossorigin href="/urban_comparator/assets/index-a6dn0ikS.css">
+</head>
+<body>
+
+<div class="map-container">
+    <div class="map-card" id="card-0">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                <input type="text" class="search-input" placeholder="Search city..." data-map-id="map1">
+                <button class="lock-btn" data-index="0" title="Unlock Map">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </button>
+            </div>
+            <div class="search-results"></div>
+        </div>
+        <div id="loader-0" class="loader-overlay"><div class="spinner"></div><div class="loader-text">Syncing viewports...</div></div>
+        <div id="map1" class="map-viewport"></div>
+    </div>
+    
+    <div class="map-card" id="card-1">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                <input type="text" class="search-input" placeholder="Search city..." data-map-id="map2">
+                <button class="lock-btn" data-index="1" title="Unlock Map">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </button>
+            </div>
+            <div class="search-results"></div>
+        </div>
+        <div id="loader-1" class="loader-overlay"><div class="spinner"></div><div class="loader-text">Syncing viewports...</div></div>
+        <div id="map2" class="map-viewport"></div>
+        
+        <div class="central-controls">
+            <div class="nav-buttons">
+                <button id="ctrl-zoom-in" title="Zoom In">+</button>
+                <button id="ctrl-zoom-out" title="Zoom Out">−</button>
+                <button id="ctrl-compass" title="Reset Bearing">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                </button>
+            </div>
+            <div class="credits">made by <a href="https://overmap.eu" target="_blank" rel="noopener noreferrer">Filippo Imberti</a> on OSM and Esri data</div>
+        </div>
+    </div>
+    
+    <div class="map-card" id="card-2">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                <input type="text" class="search-input" placeholder="Search city..." data-map-id="map3">
+                <button class="lock-btn" data-index="2" title="Unlock Map">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </button>
+            </div>
+            <div class="search-results"></div>
+        </div>
+        <div id="loader-2" class="loader-overlay"><div class="spinner"></div><div class="loader-text">Syncing viewports...</div></div>
+        <div id="map3" class="map-viewport"></div>
+    </div>
+</div>
+
+</body>
+</html>
