@@ -1,0 +1,17 @@
+{
+  "name": "urban-comparator",
+  "version": "2.0.0",
+  "description": "Comparative maps of urban expansion",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -p 3000 ."
+  },
+  "keywords": [
+    "maps",
+    "urban",
+    "maplibre"
+  ],
+  "author": "Filippo Imberti",
+  "license": "CC0-1.0",
+  "dependencies": {}
+}
